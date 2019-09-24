@@ -1,4 +1,4 @@
-class Settings():
+class Settings:
     """A class to store all settings for Alien Invasion."""
 
     def __init__(self):
@@ -15,7 +15,7 @@ class Settings():
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = 60, 60, 60
-        self.bullets_allowed = 3
+        self.bullets_allowed = 1000
 
         # Alien settings.
         self.fleet_drop_speed = 10
@@ -26,6 +26,12 @@ class Settings():
         self.score_scale = 1.5
 
         self.initialize_dynamic_settings()
+
+        self.ship_speed_factor = 1.5
+        self.bullet_speed_factor = 3
+        self.alien_speed_factor = 1
+        self.alien_points = 50
+        self.fleet_direction = 1
 
     def initialize_dynamic_settings(self):
         """Initialize settings that change throughout the game."""
